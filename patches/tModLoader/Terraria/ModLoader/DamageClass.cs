@@ -55,6 +55,12 @@ namespace Terraria.ModLoader
 
 		internal protected virtual string DisplayNameInternal => ClassName.GetTranslation(Language.ActiveCulture);
 
+		public bool CountsAsClass<T>() where T : DamageClass
+			=> CountsAsClass(ModContent.GetInstance<T>());
+
+		public bool CountsAsClass(DamageClass damageClass)
+			=> DamageClassLoader.effectInheritanceCache[Type, damageClass.Type];
+
 		/// <summary>
 		/// This lets you define the classes that this DamageClass will benefit from (other than itself) for the purposes of stat bonuses, such as damage and crit chance.
 		/// This returns a struct called StatInheritanceData.
