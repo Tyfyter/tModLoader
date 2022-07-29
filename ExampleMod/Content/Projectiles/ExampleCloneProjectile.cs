@@ -50,7 +50,7 @@ namespace ExampleMod.Content.Projectiles
 		}
 
 		// Now, using CloneDefaults() and aiType doesn't copy EVERY aspect of the projectile. In Vanilla, several other methods
-		// are used to generate different effects that aren't included in AI. For the case of the Meowmete projectile, since the
+		// are used to generate different effects that aren't included in AI. For the case of the Meowmere projectile, since the
 		// richochet sound is not included in the AI, we must add it ourselves:
 		public override bool OnTileCollide(Vector2 oldVelocity) {
 			// Since there are two Richochet sounds for the Meowmere, we can randomly choose between them like this:

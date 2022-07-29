@@ -46,5 +46,13 @@ namespace ExampleMod.Content.Items.Weapons
 				.AddTile<Tiles.Furniture.ExampleWorkbench>()
 				.Register();
 		}
+		// this method makes the weapon not recieve melee prefixes
+		public override bool MeleePrefix() {
+			return false;
+		}
+		// this method makes the weapon recieve ranged prefixes
+		public override bool RangedPrefix() {
+			return true;
+		}
 	}
 }
