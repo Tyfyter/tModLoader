@@ -964,6 +964,17 @@
  									if (type == 1002)
  										num19 /= 2;
  
+@@ -10325,7 +_,10 @@
+ 										ai[0] += num20;
+ 									}
+ 
++									/*
+ 									if (aiStyle == 3 && type != 301 && type != 866 && type != 902) {
++									*/
++									if (aiStyle == 3 && !ProjectileID.Sets.PiercingBoomerangs[type]) {
+ 										if (ai[0] == 0f) {
+ 											if (type == 106)
+ 												LightDisc_Bounce(base.Center + velocity.SafeNormalize(Vector2.UnitX) * 8f, (-velocity).SafeNormalize(Vector2.UnitX));
 @@ -10364,7 +_,7 @@
  										else
  											direction = -1;

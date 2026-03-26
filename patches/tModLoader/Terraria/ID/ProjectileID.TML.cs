@@ -91,5 +91,10 @@ partial class ProjectileID
 		/// <br/><br/> Defaults to false. Vanilla entries include <see cref="FlyingPiggyBank"/>, <see cref="VoidLens"/>, and <see cref="ChesterPet"/>.
 		/// </summary>
 		public static bool[] IsInteractable = Factory.CreateBoolSet(false, 525, 734, 960);
+
+		/// <summary>
+		/// Boomerangs which should not bounce off of enemies normally
+		/// </summary>
+		public static bool[] PiercingBoomerangs = Factory.CreateBoolSet(false, PaladinsHammerFriendly, BouncingShield, CombatWrench);
 	}
 }
